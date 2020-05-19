@@ -10,7 +10,7 @@ Open with live server or open index.html file in your browser
 * CSS - For styling the user interface
 
 ## Link
-Access app via https://odinaka-joy.github.io/lancerfree
+Access app via https://dinakajoy.github.io/lancerfree/
 
 ## Author
-[Odinaka Joy](https://odinakajoy.com)
+[Odinaka Joy](https://dinakajoy.com)
