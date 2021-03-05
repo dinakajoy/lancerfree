@@ -13,4 +13,4 @@ Open with live server or open index.html file in your browser
 Access app via https://dinakajoy.github.io/lancerfree/
 
 ## Author
-[Odinaka Joy](https://dinakajoy.com)
+[Odinaka Joy](dinakajoy.com)
