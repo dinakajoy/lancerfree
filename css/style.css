@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*, 
+*::before, 
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,7 +15,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .container {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 section {
@@ -25,21 +27,36 @@ section {
   width: 100%;
   margin: 20px auto;
   font-size: 1rem;
+  cursor: pointer;
 }
 .header {
+  min-height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 15px 20px;
 }
 .header-left {
-  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .header__logo {
   max-width: 100%;
-  vertical-align: middle;
-}
-.header-right {
-  text-align: right;
 }
 .header__link {
   display: inline-block;
@@ -55,19 +72,46 @@ section {
 .header__link a:focus, .header__link a:hover {
   color: rgb(0,108,255);
 }
+
 .showcase {
   background: rgb(0,108,255);
   background: linear-gradient(90deg, rgba(0,108,255,1) 0%, rgba(86,207,233,0.8939950980392157) 99%);
-  padding: 40px 20px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: #f4f4f4;
+}
+.showcase-wrapper {
   display: grid;
   grid-template-columns: 1fr;
+}
+.showcase-left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.showcase-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
 .showcase-right {
   display: none;
 }
 .showase__title {
   margin-bottom: 20px;
+}
+.showcase-cta {
+  width: 100%;
 }
 .btn--gold {
   background-color: rgb(255, 123, 0);
@@ -173,9 +217,14 @@ section {
   grid-template-columns: 1fr;
   grid-gap: 50px;
 }
+.bg {
+  width: 100%;
+  height: 300px;
+}
 .wrapper img {
   box-shadow: 2px 2px 2px #ccc;
   width: 100%;
+  height: 100%;
 }
 .wrapper .sk-content {
   background-color: #fff;
@@ -185,6 +234,32 @@ section {
 .sk button {
   display: none;
 }
+.footer {
+  background-color: #161e2c;
+  color: #fff;
+  padding: 10px 0;
+  margin-top: 30px;
+  font-size: .8rem;
+}
+.footer div {
+  padding: 20px 0;
+}
+.footer h3 {
+  padding: 10px 0;
+}
+.apps div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+.footer .bdr {
+  border-bottom: 1px solid #2b3340;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+}
 
 @media (min-width: 768px) {
   html {
@@ -192,6 +267,9 @@ section {
   }
   section {
     margin: 150px auto !important;
+  }
+  .header__link {
+    margin: 0 10px;
   }
   .header-right {
     text-align: left;
@@ -201,9 +279,8 @@ section {
     padding: 10px 20px;
     font-weight: bolder;
   }
-  .showcase {
+  .showcase-wrapper {
     grid-template-columns: 60% 40%;
-    padding: 100px 20px;
   }
   .showcase-left {
     margin-right: 30px;
@@ -223,9 +300,18 @@ section {
   .showcase-right img {
     max-width: 100%;
   }
+  .showcase-cta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .showcase-cta .btn--gold {
+    margin-right: 10px;
+  }
   .btn {
-    display: inline-block;
-    width: 40%;
+    display: block;
+    width: 90%;
   }
   .companies-sm {
     display: none;
@@ -278,8 +364,30 @@ section {
     width: 100%;
     grid-template-columns: 1fr 1fr;
   }
+  .footer__links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  .apps div {
+    width: 100%;
+  }
+  .apps .mobile {
+    display: block;
+    width: 100%;
+  }
+  .footer .bdr {
+    border-bottom: none;
+  }
+  .footer-wrapper {
+    border-bottom: 1px solid #2b3340;
+  }
 }
 @media (min-width: 961px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
   .header-left_link {
     display: inline-block;
   }
@@ -301,6 +409,9 @@ section {
   }
 }
 @media (min-width: 1175px) {
+  .container {
+    width: 90%;
+  }
   .wrap {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -331,5 +442,11 @@ section {
   }
   .header {
     grid-template-columns: 2fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: 23% auto;
   }
 }
