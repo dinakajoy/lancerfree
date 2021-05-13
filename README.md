@@ -1,4 +1,4 @@
-# lancerfree
+# Lancerfree
 
 ## Description
 This is a clone of freelancer.com website called lancerfree. What inspired to work on this project is the fact that most of the task from clients is usually to build a website smilar to another. Maybe not in UI designs but layout and functionality. This is for me to see how well I can create a copy of another website from scratch. *Disclaimer*: I only focused on the look here, the functionalities are not covered
